@@ -1,0 +1,221 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.lichi.goodrongyi"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 10
+        versionName "1.10"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        flavorDimensions "lichi"
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'RongKaiXin'
+            keyPassword '1234qwer'
+            storeFile file('F:\\项目\\lichi\\lichi.keystore.jks')
+            storePassword '1234qwer'
+        }
+        debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('./debug.keystore')
+            storePassword 'android'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            // Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            zipAlignEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            //def outputFile = output.outputFile
+            if (variant.buildType.zipAlignEnabled) {
+                // if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                // apk_渠道名-版本号-版本名称-编译时间.apk
+                def fileName = "com.lichi.goodrongyi-${variant.productFlavors[0].name}-v${defaultConfig.versionCode}-${defaultConfig.versionName}-${releaseTime()}.apk"
+                outputFileName = fileName;
+                // }
+            }
+
+        }
+    }
+
+    dexOptions {
+        dexInProcess true
+        preDexLibraries true
+        javaMaxHeapSize "4g"//越大越好
+        //incremental true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    productFlavors {
+        lichi {}
+        //qihu360 {} // 360手机助手
+        //yingyongbao {} // 腾讯应用宝
+        // wandoujia {} // 豌豆荚
+//        baidu {} // 百度手机助手
+//        miui {} // 小米
+//        flyme {} // 魅族
+//        lenovo {} // 联想-乐商店
+//        oppo {} // Oppo-可可软件商店
+//        huawei {} // 华为
+//        vivo {} // vivo
+//        hiapk {} // 安卓市场
+//        sj91 {} // 91手机助手
+//        sogou {} // 搜狗手机市场
+//        sohu {} // 搜狐应用中心
+
+//        taobao {} // 淘宝手机助手
+//        gfan {} // 机锋
+//        appchina {} // 应用汇
+//        mumayi {} // 木蚂蚁
+//        wangyi163 {} // 网易应用
+//        nduoa {} // N多市场
+//        mm10086 {} // MM商城-中国移动
+//        wostore {} // WO商店
+//        youyi {} // 优异
+//        uc {} // UC+开发平台
+//        anzhi {} // 安智市场
+//        google {} // google play
+//        amazon {} // 亚马逊
+
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+}
+
+
+def releaseTime() {
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+    return simpleDateFormat.format(new Date());
+
+}
+
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.youth.banner:banner:1.4.10'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.paradoxie:AutoVerticalTextview:0.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.android.support:recyclerview-v7:25.3.1'
+    //添加Retrofit依赖
+    compile 'com.zhy:okhttputils:2.6.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okio:okio:1.9.0'
+    //添加RX依赖
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    // compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+    //compress image lib
+    compile 'top.zibin:Luban:1.1.2'
+    //添加相应json转换器
+    compile 'com.squareup.retrofit2:converter-jackson:2.0.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+    //添加fresco图片加载框架依赖
+    //compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    //兼容5.0以下
+    compile 'com.android.support:multidex:1.0.0'
+    //compile 'com.umeng.analytics:analytics:latest.integration'
+    //Fast Json转化
+    compile 'com.alibaba:fastjson:1.2.24'
+    compile 'com.alibaba:fastjson:1.1.56.android'
+    //https://github.com/orhanobut/hawk  缓存
+    compile 'com.orhanobut:hawk:2.0.1'
+
+    //添加变色状态栏依赖
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+
+    //引入动态权限开源库
+    compile 'com.yanzhenjie:permission:1.0.7'
+    implementation files('libs/SocialSDK_Sina_Full.jar')
+    implementation files('libs/SocialSDK_WeiXin_Full.jar')
+    implementation files('libs/open_sdk_r5788_lite.jar')
+    implementation files('libs/umeng_social_api.jar')
+    implementation files('libs/umeng_social_net.jar')
+    implementation files('libs/umeng_social_shareboard.jar')
+    implementation files('libs/umeng-analytics-7.4.0.jar')
+    implementation files('libs/umeng-common-1.4.0.jar')
+    implementation files('libs/jcore-android-1.1.8.jar')
+    implementation project(':refresh-header')
+    implementation project(':refresh-layout')
+    implementation project(':sweetlibrary')
+    implementation files('libs/jpush-android-3.1.0.jar')
+    implementation files('libs/SocialSDK_QQ_Full.jar')
+    implementation files('libs/umeng_social_tool.jar')
+   // implementation files('libs/utdid4all-1.1.5.3_proguard.jar')
+    implementation files('libs/umeng_social_shareview.jar')
+    implementation files('libs/wechat-sdk-android-with-mta-1.1.6.jar')
+    implementation files('libs/weiboSDKCore.jar')
+    compile project(path: ':pickerview')
+    implementation files('libs/core-3.2.1.jar')
+    implementation project(':guideview')
+    implementation files('libs/alipaySdk-20170922.jar')
+}

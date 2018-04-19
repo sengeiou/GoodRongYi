@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_discover_img1"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:src="@drawable/stance_img" />
+
+    <TextView
+        android:id="@+id/tv_discover_txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="信用卡使用攻略"
+        android:textColor="@color/app_coures_color1"
+        android:textSize="@dimen/font_size_small" />
+
+</LinearLayout>

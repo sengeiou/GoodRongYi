@@ -1,0 +1,109 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="dialog_vanish_anim" parent="@android:style/Animation">
+        <!--  <item name="android:windowEnterAnimation">@anim/dialog_appear</item>-->
+        <item name="android:windowExitAnimation">@anim/dialog_vanish</item>
+    </style>
+
+    <style name="my_item_common_text">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#484848</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="popupwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_show_anim</item>
+        <item name="android:windowExitAnimation">@anim/popupwindow_hide_anim</item>
+    </style>
+
+    <style name="slot_card_text">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="popupwindow_card_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_in</item>
+        <item name="android:windowExitAnimation">@anim/popupwindow_out</item>
+    </style>
+
+    <declare-styleable name="DynamicWave">
+        <attr name="waveHightRatio" format="float" />
+        <attr name="waveColor" format="color" />
+    </declare-styleable>
+
+    <style name="popupwindow_date">
+        <item name="android:windowEnterAnimation">@anim/popupwindow_in</item>
+        <item name="android:windowExitAnimation">@anim/popupwindow_out</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="mProgress_circle">
+        <item name="android:minWidth">25dp</item>
+        <item name="android:minHeight">25dp</item>
+        <item name="android:maxWidth">60dp</item>
+        <item name="android:maxHeight">60dp</item>
+    </style>
+
+    <style name="Animations_BottomPush">
+        <item name="android:windowEnterAnimation">@anim/pw_push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/pw_push_bottom_out</item>
+    </style>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/still</item>
+        <item name="android:windowExitAnimation">@anim/still</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:clipToPadding">true</item>
+    </style>
+
+    <declare-styleable name="RoundNumProgressView">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="percentTextColor" format="color" />
+        <attr name="percentTextSize" format="dimension" />
+        <attr name="maxProgress" format="integer"></attr>
+        <attr name="percentTextDisplayable" format="boolean"></attr>
+        <attr name="rotateOrientation">
+            <enum name="counterclockwise" value="0"></enum>
+            <enum name="clockwise" value="1"></enum>
+        </attr>
+        <attr name="style">
+            <enum name="stroke" value="0"></enum>
+            <enum name="fill" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+</resources>

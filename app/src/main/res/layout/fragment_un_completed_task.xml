@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.lichi.goodrongyi.ui.fragment.my.slotCardTask.UnCompletedTaskFragment"
+             android:background="#f9f4f4">
+
+    <TextView
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:background="@color/listview_interval"
+        android:layout_marginLeft="20dp"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/slot_card_uncomplete_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f9f4f4">
+
+    </android.support.v7.widget.RecyclerView>
+
+</FrameLayout>

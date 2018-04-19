@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/date_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="2px"
+            android:layout_height="10dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/listview_interval" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/slot_card_circle" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/slot_card_task_date"
+                style="@style/slot_card_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="今天"
+                android:textColor="@color/tv_blue"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/task_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:background="@color/listview_interval" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/slot_card_task_c_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/slot_card_completed"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/slot_card_task_u_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/slot_card_uncompleted"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/selectlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/small_border_radius"
+            android:paddingBottom="20dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/slot_card_task_bank_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="7dp"
+                android:src="@mipmap/cbc_icon" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/slot_card_task_bank_name"
+                    style="@style/slot_card_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工商银行"
+                    android:textColor="@color/text_title"
+                    android:textSize="@dimen/font_size_tiny" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/slot_card_task_user_name"
+                        style="@style/slot_card_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="张学友"
+                        android:textColor="@color/text_title"
+                        android:textSize="@dimen/font_size_tiny" />
+
+                    <TextView
+                        android:id="@+id/slot_card_task_score"
+                        style="@style/slot_card_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="*7541"
+                        android:textColor="@color/text_title"
+                        android:textSize="@dimen/font_size_tiny" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/listview_interval" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/slot_card_task_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1238"
+                    android:textColor="@color/cred"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/slot_card_task_comment_type"
+                    style="@style/slot_card_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="推荐消费：珠宝钟表"
+                    android:textColor="@color/text_title"
+                    android:textSize="@dimen/font_size_tiny" />
+
+                <TextView
+                    android:id="@+id/practical"
+                    style="@style/slot_card_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="实际消费：1238"
+                    android:textColor="@color/text_title"
+                    android:textSize="@dimen/font_size_tiny"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

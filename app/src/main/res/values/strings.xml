@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">融开心</string>
+    <string name="app_newname">融开心</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_first_item">邀请排名</string>
+    <string name="my_second_item">消费任务</string>
+    <string name="my_third_item">我的佣金</string>
+    <string name="my_forth_item">信用积分</string>
+    <string name="my_fifth_item">我的课程</string>
+    <string name="my_sixth_item">我的客服</string>
+    <string name="my_seventh_item">系统消息</string>
+    <string name="my_eighth_item">意见与反馈</string>
+    <string name="my_ninth_item">账户与安全</string>
+    <string name="my_brand_item">授权牌</string>
+    <string name="my_realname_item">实名认证</string>
+    <string name="mail_bill_confirm_1">用户邮箱信息保障声明。无隐私风险保障</string>
+    <string name="mail_bill_confirm_2">已通过国家级安全认证</string>
+    <string name="one_button_diagnose_sample">尊敬的XX用户，根据您的资料完善情况及信用卡情况，可在一月之内进行提升额度查询，提升规则：XXXXX</string>
+    <string name="my_title">我的</string>
+    <string name="course_signedup">• 已报名</string>
+    <string name="course_purchased">• 已购买</string>
+    <string name="cellphone_input_hint">请输入手机号</string>
+    <string name="note_input_hint">请输入备注信息</string>
+    <string name="slot_card_task_title">刷卡任务</string>
+    <string name="teacher_description_sample">真是人如其名，有文采有内涵的一位老师，肖老师话语总是充满着诗意，蕴含着真理，他把真...</string>
+    <string name="title_activity_data_list">DataListActivity</string>
+    <string name="account_input_hint">请输入账号</string>
+    <string name="password_input_hint">请输入密码</string>
+    <string name="confirm_code_input_hint">请输入验证码</string>
+    <string name="authorize_agreement_title">《授权协议》</string>
+
+    <string name="app_error">系统异常</string>
+    <string name="app_error_message">Android客户端 异常</string>
+    <string name="submit_report">确定</string>
+
+    <string name="umeng_sharebutton_copy">复制文本</string>
+    <string name="umeng_sharebutton_copyurl">复制连接</string>
+    <string name="umeng_sharebutton_code">二维码</string>
+
+    <string name="app_abnormal">系统异常</string>
+</resources>

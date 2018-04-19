@@ -1,0 +1,203 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/compile_interval"
+    tools:context="com.lichi.goodrongyi.ui.fragment.DiscoverFragment">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/tv_blue"
+        android:gravity="center"
+        android:text="发现"
+        android:textColor="@color/white" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/iv_investigation_query"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@mipmap/investigation"
+                    android:gravity="center"
+                    android:text="征信查询"
+                    android:textColor="@color/text_title"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/iv_social_security_query"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@mipmap/social_security"
+                    android:gravity="center"
+                    android:text="社保查询"
+                    android:textColor="@color/text_title"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/iv_accumulation_fund_query"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@mipmap/accumulation_fund"
+                    android:gravity="center"
+                    android:text="公积金查询"
+                    android:textColor="@color/text_title"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/iv_education_query"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@mipmap/education"
+                    android:gravity="center"
+                    android:text="学历查询"
+                    android:textColor="@color/text_title"
+                    android:textSize="@dimen/font_size_more" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="1dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/text_secondary_title"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/text"
+                    android:text="精彩圈子推荐"
+                    android:textColor="@color/text_secondary_title"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/tv_discover_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多"
+                        android:textColor="@color/text_secondary_title"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/arrow"
+                        android:backgroundTint="@color/text_secondary_title" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/gv_discover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="5dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="1dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/text_secondary_title"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/text1"
+                    android:text="最新圈子动态"
+                    android:textColor="@color/text_secondary_title"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/invitationmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多"
+                        android:textColor="@color/text_secondary_title"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/arrow"
+                        android:backgroundTint="@color/text_secondary_title" />
+                </LinearLayout>
+                >
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_discover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

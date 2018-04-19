@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lichi.goodrongyi.ui.activity.my.FeedBackActivity"
+    android:background="@color/gray_background"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/tv_blue"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="意见反馈"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="请输入您需要帮助的问题，并留下您的电话号"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="码，我们会第一时间回复并给予您帮助"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/feedback_information"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:gravity="top|left"
+        android:textSize="12sp"
+        android:background="@color/white"
+        android:hint="请输入宝贵意见"
+        android:paddingTop="20dp"
+        android:paddingLeft="15dp"
+        android:inputType="none"/>
+    <EditText
+        android:id="@+id/feedback_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:textSize="12sp"
+        android:hint="请输入手机号码"
+        android:paddingLeft="15dp"/>
+    <Button
+        android:id="@+id/feedback_commit"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/botton_solid"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white" />
+</LinearLayout>

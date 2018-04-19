@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical"
+    tools:context="com.lichi.goodrongyi.ui.activity.visa.VisaDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rll_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/tv_blue"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/back"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:src="@mipmap/back"
+            android:text="返回"
+            android:textSize="@dimen/font_size_small"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="信用卡-详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_more" />
+
+        <ImageView
+            android:id="@+id/iv_visa_detail_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/more_icon"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/ViewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="@color/tv_blue"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp">
+
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:id="@+id/tv_add_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="+ 添加账单"
+        android:textColor="@color/cred"
+        android:textSize="18sp" />
+
+    <ExpandableListView
+        android:id="@+id/elv_bill"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:groupIndicator="@null"
+        android:childDivider="@color/line"
+        android:divider="#ffffff">
+
+    </ExpandableListView>
+
+    <Button
+        android:id="@+id/btn_diagnose_add_limit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tv_blue"
+        android:padding="8dp"
+        android:text="诊断提额"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>
