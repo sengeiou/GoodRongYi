@@ -67,6 +67,9 @@
             android:value="Umeng"></meta-data>
 
 
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
         <activity
             android:name=".ui.activity.main.MainActivity"
             android:exported="true"
