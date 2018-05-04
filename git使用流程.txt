@@ -31,6 +31,7 @@ git push -u origin master
 切换到你的新分支: git checkout newBranch
 将新分支发布在github上： git push origin newBranch
 将线下的分支与线上的关联起来 ：git branch --set-upstream-to origin/隔离版本（隔离版本就是线上分支名字）
+将线上分支直接拉取下来：git fetch origin dev:temp （创建一个temp分支  在把线上dev分支拉下来）
 在本地删除一个分支： git branch -d newBranch   （大写的D 是强制删除）
 在github远程端删除一个分支： git push origin :newBranch (分支名前的冒号代表删除)
 /git push origin –delete newBranch
