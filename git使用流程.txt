@@ -1,36 +1,37 @@
- Ò» ¡¢
-ÉèÖÃGitµÄuser nameºÍemail£º
+ ä¸€ ã€
+è®¾ç½®Gitçš„user nameå’Œemailï¼š
 $ git config --global user.name "xuhaiyan"
 $ git config --global user.email "haiyan.xu.vip@gmail.com"
 
-¶ş¡¢Éú³ÉSSHÃÜÔ¿¹ı³Ì£º
-1.²é¿´ÊÇ·ñÒÑ¾­ÓĞÁËsshÃÜÔ¿£ºcd ~/.ssh
-Èç¹ûÃ»ÓĞÃÜÔ¿Ôò²»»áÓĞ´ËÎÄ¼ş¼Ğ£¬ÓĞÔò±¸·İÉ¾³ı
-2.Éú´æÃÜÔ¿£º
-$ ssh-keygen -t rsa -C ¡°haiyan.xu.vip@gmail.com¡±
-°´3¸ö»Ø³µ£¬ÃÜÂëÎª¿Õ¡£
+äºŒã€ç”ŸæˆSSHå¯†é’¥è¿‡ç¨‹ï¼š
+1.æŸ¥çœ‹æ˜¯å¦å·²ç»æœ‰äº†sshå¯†é’¥ï¼šcd ~/.ssh
+å¦‚æœæ²¡æœ‰å¯†é’¥åˆ™ä¸ä¼šæœ‰æ­¤æ–‡ä»¶å¤¹ï¼Œæœ‰åˆ™å¤‡ä»½åˆ é™¤
+2.ç”Ÿå­˜å¯†é’¥ï¼š
+$ ssh-keygen -t rsa -C â€œhaiyan.xu.vip@gmail.comâ€
+æŒ‰3ä¸ªå›è½¦ï¼Œå¯†ç ä¸ºç©ºã€‚
 
-3.Ìí¼ÓÃÜÔ¿µ½ssh£ºssh-add ÎÄ¼şÃû
-ĞèÒªÖ®Ç°ÊäÈëÃÜÂë¡£
-4.ÔÚgithubÉÏÌí¼ÓsshÃÜÔ¿£¬ÕâÒªÌí¼ÓµÄÊÇ¡°id_rsa.pub¡±ÀïÃæµÄ¹«Ô¿¡£
+3.æ·»åŠ å¯†é’¥åˆ°sshï¼šssh-add æ–‡ä»¶å
+éœ€è¦ä¹‹å‰è¾“å…¥å¯†ç ã€‚
+4.åœ¨githubä¸Šæ·»åŠ sshå¯†é’¥ï¼Œè¿™è¦æ·»åŠ çš„æ˜¯â€œid_rsa.pubâ€é‡Œé¢çš„å…¬é’¥ã€‚
 
-5 ´´½¨ÅäÖÃºÃºó  ÔÚÏîÄ¿ËùÔÚÎÄ¼ş¼Ğ 
+5 åˆ›å»ºé…ç½®å¥½å  åœ¨é¡¹ç›®æ‰€åœ¨æ–‡ä»¶å¤¹ 
 1. git init
-2. git add£¨ Õâ¸öÊÇµ¥¶ÀÒ»¸öÎÄ¼ş £© git add ./£¨ÕâÊÇÈ«²¿ÎÄ¼ş£©
-3. git status (²é¿´ÊÇ·ñaddÆğÁË)
-4. git commit -am "###"      -------ÒÔÉÏ3²½Ö»ÊÇ±¾µØÌá½»
+2. git addï¼ˆ è¿™ä¸ªæ˜¯å•ç‹¬ä¸€ä¸ªæ–‡ä»¶ ï¼‰ git add ./ï¼ˆè¿™æ˜¯å…¨éƒ¨æ–‡ä»¶ï¼‰
+3. git status (æŸ¥çœ‹æ˜¯å¦addèµ·äº†)
+4. git commit -am "###"      -------ä»¥ä¸Š3æ­¥åªæ˜¯æœ¬åœ°æäº¤
 5.git remote add origin git@xx.xx.xx.xx:repos/xxx/xxx/xxx.git
-6. git pull --rebase origin master  £¨ÏÈpullÏÂÀ´£©
-7.git push origin ±¾µØ·ÖÖ§:Ô¶³Ì·ÖÖ§
-£¨git push --set-upstream origin master  Ìá½»µÄÊ±ºòÈç¹û±¨´íÓĞÓÃ£©
+6. git pull --rebase origin master  ï¼ˆå…ˆpullä¸‹æ¥ï¼‰
+7.git push origin æœ¬åœ°åˆ†æ”¯:è¿œç¨‹åˆ†æ”¯
+ï¼ˆgit push --set-upstream origin master  æäº¤çš„æ—¶å€™å¦‚æœæŠ¥é”™æœ‰ç”¨ï¼‰
 git push -u origin master 
 
 
-·ÖÖ§
-ÔÚ±¾µØĞÂ½¨Ò»¸ö·ÖÖ§£º git branch newBranch
-ÇĞ»»µ½ÄãµÄĞÂ·ÖÖ§: git checkout newBranch
-½«ĞÂ·ÖÖ§·¢²¼ÔÚgithubÉÏ£º git push origin newBranch
-ÔÚ±¾µØÉ¾³ıÒ»¸ö·ÖÖ§£º git branch -d newBranch   £¨´óĞ´µÄD ÊÇÇ¿ÖÆÉ¾³ı£©
-ÔÚgithubÔ¶³Ì¶ËÉ¾³ıÒ»¸ö·ÖÖ§£º git push origin :newBranch (·ÖÖ§ÃûÇ°µÄÃ°ºÅ´ú±íÉ¾³ı)
-/git push origin ¨Cdelete newBranch
-×¢ÒâÉ¾³ıÔ¶³Ì·ÖÖ§ºó£¬Èç¹ûÓĞ¶ÔÓ¦µÄ±¾µØ·ÖÖ§£¬±¾µØ·ÖÖ§²¢²»»áÍ¬²½É¾³ı£¡
+åˆ†æ”¯
+åœ¨æœ¬åœ°æ–°å»ºä¸€ä¸ªåˆ†æ”¯ï¼š git branch newBranch
+åˆ‡æ¢åˆ°ä½ çš„æ–°åˆ†æ”¯: git checkout newBranch
+å°†æ–°åˆ†æ”¯å‘å¸ƒåœ¨githubä¸Šï¼š git push origin newBranch
+å°†çº¿ä¸‹çš„åˆ†æ”¯ä¸çº¿ä¸Šçš„å…³è”èµ·æ¥ ï¼šgit branch --set-upstream-to origin/éš”ç¦»ç‰ˆæœ¬ï¼ˆéš”ç¦»ç‰ˆæœ¬å°±æ˜¯çº¿ä¸Šåˆ†æ”¯åå­—ï¼‰
+åœ¨æœ¬åœ°åˆ é™¤ä¸€ä¸ªåˆ†æ”¯ï¼š git branch -d newBranch Â  ï¼ˆå¤§å†™çš„D æ˜¯å¼ºåˆ¶åˆ é™¤ï¼‰
+åœ¨githubè¿œç¨‹ç«¯åˆ é™¤ä¸€ä¸ªåˆ†æ”¯ï¼š git push origin :newBranch (åˆ†æ”¯åå‰çš„å†’å·ä»£è¡¨åˆ é™¤)
+/git push origin â€“delete newBranch
+æ³¨æ„åˆ é™¤è¿œç¨‹åˆ†æ”¯åï¼Œå¦‚æœæœ‰å¯¹åº”çš„æœ¬åœ°åˆ†æ”¯ï¼Œæœ¬åœ°åˆ†æ”¯å¹¶ä¸ä¼šåŒæ­¥åˆ é™¤ï¼
